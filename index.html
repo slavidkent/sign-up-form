@@ -9,48 +9,61 @@
   </head>
   <body class="body-container">
     <header class="header-container">
-      <img
-        src="./images/collins-lesulie-EMchw-7rqRw-unsplash.jpg"
-        alt="butterfly on human hand"
-      />
+      <img src="./images/collins-lesulie-EMchw-7rqRw-unsplash.jpg" alt="butterfly on human hand" />
       <div class="logo">
         <img src="./images/odin-lined.png" alt="the odin project logo" />
         <p>ODIN</p>
       </div>
       <div class="credit">
-        <p>Photo by <a href="https://unsplash.com/@clesulie">Collins Lesulie</a> from <a href="https://unsplash.com/">unsplash</a></p>
+        <p>
+          Photo by <a href="https://unsplash.com/@clesulie">Collins Lesulie</a> from
+          <a href="https://unsplash.com/">unsplash</a>
+        </p>
       </div>
     </header>
     <main class="main-container">
-      <div>
-        <div>
-          <p>
-            This is not a real online service! You know uou need something like
-            this in your life to help you realize your deepest dreams. Sign up
-            <em>now</em> to get started.
-          </p>
-          <p>You <em>know</em> you want to.</p>
+      <div class="container1 margin-move">
+        <p>
+          This is not a real online service! You know uou need something like this in your life to help you realize your
+          deepest dreams. Sign up
+          <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </div>
+      <form class="container2" action="#">
+        <div class="margin-move">
+          <p>Let's do this!</p>
+          <div class="sign-up-container">
+            <div class="wrapper">
+              <label for="first-name">FIRST NAME</label>
+              <input id="first-name" type="text" />
+            </div>
+            <div class="wrapper">
+              <label for="last-name">LAST NAME</label>
+              <input id="last-name" type="text" />
+            </div>
+            <div class="wrapper">
+              <label for="email">EMAIL</label>
+              <input id="email" type="email" />
+            </div>
+            <div class="wrapper">
+              <label for="phone-number">PHONE NUMBER</label>
+              <input id="phone-number" type="number" />
+            </div>
+            <div class="wrapper">
+              <label for="password">PASSWORD</label>
+              <input id="password" type="password" />
+            </div>
+            <div class="wrapper">
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input id="confirm-password" type="password" />
+            </div>
+          </div>
         </div>
-        <form action="#">
-          <fieldset>
-            <label for="first-name">FIRST NAME</label>
-            <input id="first-name" type="text" />
-            <label for="last-name">LAST NAME</label>
-            <input id="last-name" type="text" />
-            <label for="email">EMAIL</label>
-            <input id="email" type="email" />
-            <label for="phone-number">PHONE NUMBER</label>
-            <input id="phone-number" type="number" />
-            <label for="password">PASSWORD</label>
-            <input id="password" type="password" />
-            <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input id="confirm-password" type="password" />
-          </fieldset>
-        </form>
-        <div>
-          <button>Create Account</button>
-          <p>Already have an account? <a href="#">Log in</a></p>
-        </div>
+      </form>
+      <div class="container3 margin-move">
+        <button>Create Account</button>
+        <p>Already have an account? <a href="#">Log in</a></p>
       </div>
     </main>
   </body>

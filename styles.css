@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @font-face {
   font-family: 'Norse-Bold';
   src: url('./fonts/Norse-Bold.otf');
@@ -7,12 +8,13 @@
   --secondary-bg-color: rgb(255, 255, 255);
   --header-text-color: rgb(255, 255, 255);
   --secondary-text-color: black;
+  --button-color:rgb(189, 131, 65);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 .body-container {
   display: flex;
@@ -33,24 +35,24 @@
 }
 
 .logo {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 30%;
+  top:20%;
   gap: 1rem;
   padding: 1rem 0;
 }
 .logo > img {
-  width: 6rem;
+  width: 7rem;
   height: auto;
 }
 .logo > p {
   font-family: 'Norse-Bold';
   color: var(--header-text-color);
-  font-size: 7rem;
+  font-size: 6rem;
 }
 
 .credit {
@@ -68,10 +70,68 @@
   color: var(--header-text-color);
   text-align: center;
 }
-
 /* end of header section====================== */
 
 /* main section ======================= */
 .main-container {
   flex: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.margin-move{
+  margin-left:50px
+}
+
+.container1{
+  width: 80%;
+}
+.container1 p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.container1 p:last-child{
+  margin:1rem 0 2rem 0;
+}
+
+.container2{
+  width:100%;
+  border: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px 0;
+}
+.main-container p{
+  font-size: 2rem;
+}
+.sign-up-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sign-up-container label{
+  font-size: 1.5rem;
+}
+.sign-up-container input {
+  height: 1.5rem;
+}
+
+.container3{
+  width: 100%;
+  margin-top: 50px;
+}
+.container3 button{
+  font-size: 1.5rem;
+  padding: 10px 60px;
+  color: var(--header-text-color);
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.container3 p{
+  font-size: 1.5rem;
 }
