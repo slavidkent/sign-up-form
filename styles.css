@@ -13,10 +13,12 @@
   --input-border-color: rgba(0, 0, 0, 0.1);
   --input-background-color: rgb(250, 250, 250);
   --input-shadow-color-focus: rgb(138, 150, 252);
+  --input-shadow-color-error: rgb(252, 138, 138);
+  --input-shadow-color-valid: rgb(163, 240, 152);
   --button-color: rgb(189, 131, 65);
   --button-color-hover: rgb(197, 142, 80);
   --button-color-active: rgb(141, 96, 45);
-  --hyperlink-color:rgb(189, 131, 65);
+  --hyperlink-color: rgb(189, 131, 65);
 }
 /* =============general============= */
 * {
@@ -33,6 +35,11 @@
 .margin-move {
   margin-left: 50px;
   margin-right: 50px;
+}
+@media screen and (max-width: 850px) {
+  .margin-move {
+    font-size: 1.2rem;
+  }
 }
 /* ==================header section ===================== */
 .header-container {
@@ -59,14 +66,15 @@
   gap: 1rem;
   padding: 1rem 0;
 }
-.logo > img {
+.logo img {
   width: 7rem;
   height: auto;
 }
-.logo > p {
+.logo p {
   font-family: 'Norse-Bold';
   color: var(--header-text-color);
   font-size: 6rem;
+  text-align: center;
 }
 
 .credit {
@@ -92,7 +100,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:3rem;
+  gap: 3rem;
 }
 
 /* =======text======= */
@@ -108,8 +116,8 @@
 .container1 p:last-child {
   margin: 2rem 0 0;
 }
-@media screen and (max-width:850px) {
-  .container1 p{
+@media screen and (max-width: 850px) {
+  .container1 p {
     font-size: 1.2rem;
   }
 }
@@ -132,16 +140,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: min(750px, 100%);
+  height: 12rem;
 }
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .sign-up-container label {
   font-size: 0.85rem;
-  margin: 10px 0 3px;
+  margin: 0 0 3px 0;
   letter-spacing: 2px;
   color: var(--input-text-color);
 }
@@ -152,31 +161,38 @@
   background-color: var(--input-background-color);
   border: 1px solid var(--input-border-color);
   letter-spacing: 0.5px;
-  width: min(20rem,80%);
-}
-.sign-up-container input[type='number'] {
-  -webkit-appearance: none !important;
-  -moz-appearance: textfield !important;
+  width: min(20rem, 80%);
 }
 .sign-up-container input:focus {
   outline: 2px solid var(--input-shadow-color-focus);
   box-shadow: 0 0 5px var(--input-shadow-color-focus);
 }
-@media screen and (max-width:850px) {
-  .sign-up-container{
+.sign-up-container input.valid {
+  outline: 2px solid var(--input-shadow-color-valid);
+  box-shadow: 0 0 5px var(--input-shadow-color-valid);
+}
+.sign-up-container input[type='number'] {
+  -webkit-appearance: none !important;
+  -moz-appearance: textfield !important;
+}
+.sign-up-container input[type='password'].error {
+  box-shadow: 0 0 5px var(--input-shadow-color-error);
+}
+
+@media screen and (max-width: 850px) {
+  .sign-up-container {
     grid-template-columns: 1fr;
   }
-  .sign-up-container input{
-    width: max(80%,15rem);
+  .sign-up-container input {
+    width: max(80%, 15rem);
   }
 }
-/* button and login */
+
+/* register button and login */
 .container3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  height: 5rem;
 }
 .container3 button {
   font-size: 1.2rem;
@@ -185,8 +201,9 @@
   background-color: var(--button-color);
   border: none;
   border-radius: 10px;
-  transition: transform 200ms;  
+  transition: transform 200ms;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
 }
 .container3 button:hover {
   transform: translate(0px, -1px);
@@ -201,6 +218,13 @@
   font-size: 1rem;
   color: var(--main-text-color);
 }
-.container3 a{
+.container3 a {
   color: var(--hyperlink-color);
+  white-space: nowrap;
+}
+@media screen and (max-width: 600px) {
+  .container3 button {
+    align-self: center;
+    padding: 12px 25px;
+  }
 }
