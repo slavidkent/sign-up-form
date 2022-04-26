@@ -178,7 +178,9 @@
 .sign-up-container input[type='password'].error {
   box-shadow: 0 0 5px var(--input-shadow-color-error);
 }
-
+.sign-up-container input[type='password'].error:focus {
+  outline: 2px solid var(--input-shadow-color-error);
+}
 @media screen and (max-width: 850px) {
   .sign-up-container {
     grid-template-columns: 1fr;
