@@ -8,6 +8,7 @@
   --secondary-bg-color: rgb(255, 255, 255);
   --header-text-color: rgb(255, 255, 255);
   --main-text-color: rgb(29, 3, 3);
+  --invalid-text-color:rgb(235, 90, 90);
   --container-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   --input-text-color: rgb(37, 37, 37);
   --input-border-color: rgba(0, 0, 0, 0.1);
@@ -140,7 +141,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: min(750px, 100%);
-  height: 12rem;
+  height: auto;
 }
 .wrapper {
   display: flex;
@@ -148,9 +149,15 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+.wrap-pass.invalid::after{
+  content:'* password do not match';
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: var(--invalid-text-color);
+}
 .sign-up-container label {
   font-size: 0.85rem;
-  margin: 0 0 3px 0;
+  margin: 10px 0 3px 0;
   letter-spacing: 2px;
   color: var(--input-text-color);
 }
